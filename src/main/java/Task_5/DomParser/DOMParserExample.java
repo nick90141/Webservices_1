@@ -1,4 +1,4 @@
-package Task_5;
+package Task_5.DomParser;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -13,7 +13,7 @@ public class DOMParserExample {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
 
-            File file = new File("D:\\КУРС ПО JAVA\\Web-services\\№1. Software setup, web services, XML\\src\\main\\java\\Task_5\\plants.xml");
+            File file = new File("src/main/resources/plants.xml");
             Document document = builder.parse(file);
 
             NodeList plantNodes = document.getElementsByTagName("Plant");

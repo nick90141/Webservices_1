@@ -1,4 +1,6 @@
-package Task_5;
+package Task_5.Flower;
+
+import Task_5.PlantModel.Plant;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;

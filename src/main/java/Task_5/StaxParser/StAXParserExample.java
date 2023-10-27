@@ -1,4 +1,4 @@
-package Task_5;
+package Task_5.StaxParser;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -9,7 +9,7 @@ public class StAXParserExample {
     public static void main(String[] args) {
         try {
             XMLInputFactory factory = XMLInputFactory.newFactory();
-            FileInputStream fileInputStream = new FileInputStream("D:\\КУРС ПО JAVA\\Web-services\\№1. Software setup, web services, XML\\src\\main\\java\\Task_5\\plants.xml");
+            FileInputStream fileInputStream = new FileInputStream("src/main/resources/plants.xml");
             XMLStreamReader reader = factory.createXMLStreamReader(fileInputStream);
 
             while (reader.hasNext()) {

@@ -1,4 +1,6 @@
-package Task_5;
+package Task_5.PlantModel;
+
+import Task_5.GrowingTips.GrowingTips;
 
 public class Plant {
     private String name;

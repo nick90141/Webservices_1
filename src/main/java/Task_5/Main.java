@@ -1,11 +1,9 @@
 package Task_5;
 
+import Task_5.Flower.Flower;
+import Task_5.FlowerManager.FlowerManager;
+
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.ValidationEvent;
-import javax.xml.bind.util.ValidationEventCollector;
-import java.io.File;
 
 
 // Варіанти на вибір: 1. Оранжерея.
@@ -20,7 +18,7 @@ public class Main {
 //            ValidationEventCollector validationEventCollector = new ValidationEventCollector();
 //            unmarshaller.setEventHandler(validationEventCollector);
 //
-//            Flower flower = (Flower) unmarshaller.unmarshal(new File("D:\\КУРС ПО JAVA\\Web-services\\№1. Software setup, web services, XML\\src\\main\\java\\Task_5\\plants.xml"));
+//            Flower flower = (Flower) unmarshaller.unmarshal(new File("src/main/resources/plants.xml"));
 //
 //            if (validationEventCollector.hasEvents()) {
 //                System.out.println("Помилки валідації:");
@@ -35,13 +33,13 @@ public class Main {
 //            e.printStackTrace();
 //        }
         try {
-            Flower flower = FlowerManager.unmarshal("D:\\КУРС ПО JAVA\\Web-services\\№1. Software setup, web services, XML\\src\\main\\java\\Task_5\\plants.xml");
+            Flower flower = FlowerManager.unmarshal("src/main/resources/plants.xml");
 
             System.out.println("Розібраний XML:");
             System.out.println(flower);
 
 
-            FlowerManager.marshal(flower, "D:\\КУРС ПО JAVA\\Web-services\\№1. Software setup, web services, XML\\src\\main\\java\\Task_5\\new_plants.xml");
+            FlowerManager.marshal(flower, "src/main/resources/new_plants.xml");
 
             System.out.println("Новий XML-документ збережено.");
         } catch (JAXBException e) {

@@ -1,4 +1,6 @@
-package Task_5;
+package Task_5.FlowerManager;
+
+import Task_5.Flower.Flower;
 
 import java.io.File;
 import javax.xml.bind.JAXBContext;
